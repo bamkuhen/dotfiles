@@ -1,0 +1,13 @@
+[user]
+	name = bamkuhen
+	email = bamkuhem@gmail.com
+[color]
+  ui = true
+[alias]
+  co = checkout
+  cm = commit
+  st = status
+  stt = status -uno
+  difff = diff --word-diff
+[push]
+	default = current
