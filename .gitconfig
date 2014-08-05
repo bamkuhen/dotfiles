@@ -1,6 +1,6 @@
 [user]
-	name = bamkuhen
-	email = bamkuhem@gmail.com
+  name = bamkuhen
+  email = bamkuhem@gmail.com
 [color]
   ui = true
 [alias]
@@ -9,5 +9,6 @@
   st = status
   stt = status -uno
   difff = diff --word-diff
+  br = branch
 [push]
-	default = current
+  default = current
