@@ -15,6 +15,7 @@ set showmatch
 set ruler
 set cursorline
 set cursorcolumn
+set title
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
 set t_Co=256
@@ -129,14 +130,16 @@ autocmd MyAutoCmd BufWritePre * call s:mkdir(expand('<afile>:p:h'), v:cmdbang)
 """"""""""""""""""""
 " カラースキーム
 """"""""""""""""""""
-colorscheme murphy
+"colorscheme murphy
 
 
 """"""""""""""""""""
 " tag
 """"""""""""""""""""
-au BufNewFile,BufRead *.js set tags+=~/Site/express/js.tags
+"au BufNewFile,BufRead *.js set tags+=~/Site/express/js.tags
 
+set tags=~/tags/mhunter.php.tags
+nnoremap <C-]> g<C-]>
 
 """"""""""""""""""""
 " neobundle
