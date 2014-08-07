@@ -1,8 +1,8 @@
 # Make sure using latest Homebrew
-update
+#update
 
 # Update already-installed formula
-upgrade
+#upgrade
 
 # Add Repository
 tap phinze/homebrew-cask || true
@@ -24,6 +24,10 @@ install brew-cask
 #cask install vagrant
 cask install iterm2
 cask install ClipMenu
+cask install alfred
+cask install dash
+cask install google-japanese-ime
+cask install sourcetree
 
 #macvim kaoriya
 #need Xcode.app
