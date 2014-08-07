@@ -26,6 +26,7 @@ let mapleader = ","
 set nowritebackup
 set nobackup
 set noswapfile
+set noundofile
 
 
 """"""""""""""""""""
@@ -76,6 +77,11 @@ nnoremap <S-Down>  <C-w>+<CR>
 "move tab
 nnoremap <C-N> gt
 nnoremap <C-P> gT
+
+function! g:searchFunction()
+  vim /^.*function/ % | cw
+endfunction
+nnoremap <C-f> <C-u> <C-n> :call g:searchFunction()<CR>
 
 """"""""""""""""""""
 "表示関係
