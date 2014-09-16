@@ -8,4 +8,12 @@ export LSCOLORS=DxGxcxdxCxegedabagacad
 
 #other
 export PATH=$PATH:~/bin
+export EDITOR=/usr/bin/vim
+alias macvim="open -a /Applications/MacVim.app"
+alias macvimdiff="/Applications/MacVim.app/Contents/MacOS/mvimdiff"
 
+# for iterm ssh color
+alias ssh=~/bin/ssh-host-color
+export PATH=/usr/local/bin:$PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
