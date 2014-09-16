@@ -54,6 +54,17 @@ nmap <silent> <Esc><Esc> :nohlsearch<CR>
 
 
 """"""""""""""""""""
+" grep
+""""""""""""""""""""
+set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude-dir=.git
+autocmd QuickfixCmdPost vimgrep copen
+autocmd QuickfixCmdPost grep copen
+
+" grep の書式を挿入
+nnoremap <expr> <Space>g ':vimgrep /\<' . expand('<cword>') . '\>/j **/*.' . expand('%:e')
+"nnoremap <expr> <Space>G ':sil grep! ' . expand('<cword>') . ' *'
+
+""""""""""""""""""""
 "ショートカット
 """"""""""""""""""""
 " w!! でスーパーユーザーとして保存（sudoが使える環境限定）

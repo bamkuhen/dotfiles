@@ -16,6 +16,9 @@ install tree
 install tmux
 install ctags
 install tig
+install rbenv ruby-build
+install readline
+#install apple-gcc
 
 # Packages for brew-cask
 install brew-cask
@@ -28,6 +31,7 @@ cask install alfred
 cask install dash
 cask install google-japanese-ime
 cask install sourcetree
+cask install xtrafinder
 
 #macvim kaoriya
 #need Xcode.app

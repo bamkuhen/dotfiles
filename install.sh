@@ -7,6 +7,7 @@ files+=(.gitconfig)
 files+=(.ssh)
 files+=(.vimrc)
 files+=(.gvimrc)
+files+=(.tigrc)
 files+=(.tmux.conf)
 files+=(Brewfile)
 
