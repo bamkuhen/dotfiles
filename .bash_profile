@@ -13,7 +13,21 @@ alias macvim="open -a /Applications/MacVim.app"
 alias macvimdiff="/Applications/MacVim.app/Contents/MacOS/mvimdiff"
 
 # for iterm ssh color
-alias ssh=~/bin/ssh-host-color
+#alias ssh=~/bin/ssh-host-color
 export PATH=/usr/local/bin:$PATH
+
+# completion
+if [ -f /etc/bash_completion ]; then
+	. /etc/bash_completion
+fi
+
+# for ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+
+# for boot2docker
+eval "$(boot2docker shellinit)"
+
+export NVM_DIR="/Users/bamkuhen/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

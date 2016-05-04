@@ -8,9 +8,9 @@ augroup END
 """"""""""""""""""""
 syntax on
 set autoindent
-set tabstop=2
-set expandtab
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
+"set expandtab
 set showmatch
 set ruler
 set cursorline
@@ -28,6 +28,7 @@ set nobackup
 set noswapfile
 set noundofile
 
+set foldmethod=marker
 
 """"""""""""""""""""
 "検索
@@ -122,7 +123,7 @@ set visualbell
 set vb t_vb=
 
 " デフォルト不可視文字は美しくないのでUnicodeで綺麗に
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 
 
 
@@ -155,7 +156,7 @@ autocmd MyAutoCmd BufWritePre * call s:mkdir(expand('<afile>:p:h'), v:cmdbang)
 """"""""""""""""""""
 "au BufNewFile,BufRead *.js set tags+=~/Site/express/js.tags
 
-set tags=~/tags/mhunter.php.tags
+set tags=./.tags;
 nnoremap <C-]> g<C-]>
 
 """"""""""""""""""""
@@ -201,7 +202,7 @@ let g:syntastic_check_on_save=1 "保存時にはチェック
 let g:syntastic_auto_loc_list=1 "エラーがあったら自動でロケーションリストを開く
 let g:syntastic_loc_list_height=6 "エラー表示ウィンドウの高さ
 set statusline+=%#warningmsg# "エラーメッセージの書式
-set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_javascript_checker = 'jshint' "jshintを使う
 let g:syntastic_mode_map = {
@@ -214,6 +215,8 @@ let g:syntastic_enable_signs=1
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 
+" yml
+NeoBundle 'stephpy/vim-yaml'
 
 """"""""""""""""""""
 "template
@@ -312,6 +315,8 @@ NeoBundle "tpope/vim-fugitive"
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/Align'
 NeoBundle 'vim-scripts/YankRing.vim'
+
+NeoBundle 'mattn/emmet-vim'
 
 """"""""""""""""""""
 " indent
