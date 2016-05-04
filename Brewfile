@@ -21,6 +21,7 @@ brew install readline
 #brew install apple-gcc
 brew install docker-machine
 brew install vagrant
+brew install bash-completion
 
 ## Packages for brew-cask
 brew install brew-cask
