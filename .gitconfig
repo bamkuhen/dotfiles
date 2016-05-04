@@ -1,9 +1,9 @@
 [user]
-  name = bamkuhen
-  email = bamkuhem@gmail.com
 [color]
   ui = true
 [alias]
+  pl = pull
+  ps = push
   co = checkout
   cm = commit
   st = status
@@ -12,3 +12,5 @@
   br = branch
 [push]
   default = current
+[user]
+	name = sato
