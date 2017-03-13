@@ -9,6 +9,8 @@
   stt = status -uno
   difff = diff --word-diff
   br = branch
+  cob = !git branch | peco | xargs git co
+  drymg = merge --no-commit --no-ff
+
 [push]
   default = current
-[user]
