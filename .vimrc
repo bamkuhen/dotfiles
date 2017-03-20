@@ -30,6 +30,8 @@ set noundofile
 
 set foldmethod=marker
 
+
+nmap <C-L><C-R>  :source ~/.vimrc<CR>
 """"""""""""""""""""
 "検索
 """"""""""""""""""""
@@ -245,6 +247,8 @@ NeoBundleLazy 'h1mesuke/unite-outline', {
       \ "autoload": {
       \   "unite_sources": ["outline"],
       \ }}
+NeoBundle 'Shougo/unite-session'
+
 nnoremap [unite] <Nop>
 nmap U [unite]
 nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
@@ -255,6 +259,7 @@ nnoremap <silent> [unite]c :<C-u>Unite bookmark<CR>
 nnoremap <silent> [unite]o :<C-u>Unite outline<CR>
 nnoremap <silent> [unite]t :<C-u>Unite tab<CR>
 nnoremap <silent> [unite]w :<C-u>Unite window<CR>
+nnoremap <silent> [unite]s :<C-u>Unite session<CR>
 let s:hooks = neobundle#get_hooks("unite.vim")
 function! s:hooks.on_source(bundle)
   " start unite in insert mode

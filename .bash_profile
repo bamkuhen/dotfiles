@@ -27,7 +27,16 @@ eval "$(rbenv init -)"
 
 
 # for boot2docker
-eval "$(boot2docker shellinit)"
+#eval "$(boot2docker shellinit)"
 
-export NVM_DIR="/Users/bamkuhen/.nvm"
+export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# for local settion
+if [ -f ~/.dotfiles/local/.bashrc ]; then
+	. ~/.dotfiles/local/.bashrc
+fi
