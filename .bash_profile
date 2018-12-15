@@ -16,18 +16,10 @@ alias macvimdiff="/Applications/MacVim.app/Contents/MacOS/mvimdiff"
 #alias ssh=~/bin/ssh-host-color
 export PATH=/usr/local/bin:$PATH
 
-# completion
-if [ -f /etc/bash_completion ]; then
-	. /etc/bash_completion
-fi
 
 # for ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-
-# for boot2docker
-#eval "$(boot2docker shellinit)"
 
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -40,3 +32,15 @@ fi
 if [ -f ~/.dotfiles/local/.bashrc ]; then
 	. ~/.dotfiles/local/.bashrc
 fi
+
+# bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bash history time format
+HISTTIMEFORMAT='%Y-%m-%dT%T%z '
+
+export LANG=ja_JP.UTF-8
+
